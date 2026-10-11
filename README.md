@@ -1,23 +1,41 @@
 # Skills
 
-An opinionated skill (`theharsh`) with coding patterns, code snippets and NPM packages for developing web applications. It is written for Claude, so it can follow the same conventions across projects.
+`skills` is a Claude Code plugin with opinionated coding patterns, code snippets and NPM packages for developing web applications. It lets Claude follow the same conventions across projects. This repository is both the plugin and its marketplace (`harsh`).
+
+## Install
+
+```
+/plugin marketplace add theharshin/skills
+/plugin install skills@harsh
+```
+
+## Skills
+
+| Skill | Use when | NPM packages |
+| --- | --- | --- |
+| [directus-generate-types](skills/directus-generate-types/SKILL.md) | Generating strict TypeScript types from the Directus API | `directus-sdk-typegen` |
+| [list-pages-development](skills/list-pages-development/SKILL.md) | Building list pages in Nuxt, Vue, Next or React | `@7span/vue-list`, `@7span/react-list` |
+| [file-naming](skills/file-naming/SKILL.md) | Creating any new file | |
+| [icons](skills/icons/SKILL.md) | Using icons while building the frontend | `@iconify/vue`, `@iconify/react` |
+| [css](skills/css/SKILL.md) | Styling the frontend with Tailwind CSS | `tailwindcss` (v4 or above) |
+| [javascript](skills/javascript/SKILL.md) | Writing JavaScript or TypeScript logic | |
+| [html](skills/html/SKILL.md) | Writing markup while building UIs | |
 
 ## Structure
 
 | Path | Purpose |
 | --- | --- |
-| [SKILL.md](SKILL.md) | Entry point and index. Maps every pattern, snippet and NPM package. |
-| [patterns/](patterns) | One coding pattern per file: purpose, rules and links to its snippets. |
-| [snippets/](snippets) | Code snippets as real files, grouped in one folder per pattern. |
-| [CLAUDE.md](CLAUDE.md) | Guidance for Claude Code when editing this repository. |
+| [.claude-plugin/plugin.json](.claude-plugin/plugin.json) | Plugin manifest |
+| [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json) | Marketplace listing for this plugin |
+| [skills/](skills) | One folder per skill, each with a `SKILL.md` and optional `snippets/` |
+| [CLAUDE.md](CLAUDE.md) | Guidance for Claude Code when editing this repository |
 
-See [SKILL.md](SKILL.md) for the full list of patterns, snippets and packages.
+## Adding a skill
 
-## Adding to this repository
-
-1. Add the pattern as `patterns/<name>.md`.
-2. Add its code snippets as separate files in `snippets/<name>/`.
-3. Map the pattern, snippets and any NPM packages in the tables in [SKILL.md](SKILL.md).
+1. Create `skills/<name>/SKILL.md` with `name` and `description` front-matter, then the purpose and rules.
+2. Add code snippets as separate files in `skills/<name>/snippets/` and link them from the `SKILL.md`.
+3. Add the skill to the table above.
+4. Bump `version` in `plugin.json` and `marketplace.json`.
 
 Naming rules:
 
@@ -30,4 +48,4 @@ Naming rules:
 
 Harsh Kansagara ([harsh@7span.com](mailto:harsh@7span.com))
 
-Copyright 7Span Internet Private Limited
+Copyright 7Span Internet Private Limited. Licensed under MIT.

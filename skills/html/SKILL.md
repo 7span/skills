@@ -1,3 +1,8 @@
+---
+name: html
+description: Keep markup lean with fewer wrapper divs. Use whenever writing markup while building UIs.
+---
+
 # HTML
 
 ## Purpose

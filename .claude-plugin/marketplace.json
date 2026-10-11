@@ -1,0 +1,15 @@
+{
+  "name": "harsh",
+  "owner": {
+    "name": "Harsh Kansagara",
+    "email": "harsh@7span.com"
+  },
+  "plugins": [
+    {
+      "name": "skills",
+      "source": "./",
+      "description": "Opinionated coding patterns, code snippets and NPM packages for developing web applications.",
+      "version": "0.1.0"
+    }
+  ]
+}

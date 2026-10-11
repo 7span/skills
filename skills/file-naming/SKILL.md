@@ -1,3 +1,8 @@
+---
+name: file-naming
+description: Naming rules for new files (kebab-case). Use whenever creating any new file.
+---
+
 # File Naming
 
 ## Purpose

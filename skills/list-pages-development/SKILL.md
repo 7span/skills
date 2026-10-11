@@ -1,3 +1,8 @@
+---
+name: list-pages-development
+description: Build list pages in Nuxt, Vue, Next or React using @7span/vue-list or @7span/react-list with a reusable wrapper component. Use when building any list page.
+---
+
 # List Pages Development
 
 > Status: stub. Patterns and snippets to be added.

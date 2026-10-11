@@ -1,3 +1,8 @@
+---
+name: javascript
+description: Rules for writing lean, readable JavaScript or TypeScript logic. Use whenever writing JavaScript or TypeScript.
+---
+
 # JavaScript
 
 ## Purpose

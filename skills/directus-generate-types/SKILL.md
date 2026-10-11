@@ -1,3 +1,8 @@
+---
+name: directus-generate-types
+description: Generate strict TypeScript types from the Directus API for frontend and backend development using directus-sdk-typegen. Use when setting up or regenerating Directus types.
+---
+
 # Directus Generate Types
 
 ## Purpose
@@ -39,5 +44,5 @@ The snippet is written for Directus + Nuxt. Use the same pattern for other frame
 
 ## Snippets
 
-- Script: [snippets/directus-generate-types/script.ts](../snippets/directus-generate-types/script.ts)
-- npm script: [snippets/directus-generate-types/package-script.json](../snippets/directus-generate-types/package.json)
+- Script: [snippets/script.ts](snippets/script.ts)
+- npm script: [snippets/package.json](snippets/package.json)

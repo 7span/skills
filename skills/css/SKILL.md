@@ -1,3 +1,8 @@
+---
+name: css
+description: Style the frontend with Tailwind CSS 4 or above using native classes and primary/secondary color variants. Use whenever writing styles or UI classes.
+---
+
 # CSS
 
 ## Purpose

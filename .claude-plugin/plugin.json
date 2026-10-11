@@ -1,0 +1,12 @@
+{
+  "name": "skills",
+  "version": "0.1.0",
+  "description": "Opinionated coding patterns, code snippets and NPM packages for developing web applications.",
+  "author": {
+    "name": "Harsh Kansagara",
+    "email": "harsh@7span.com"
+  },
+  "homepage": "https://github.com/theharshin/skills",
+  "repository": "https://github.com/theharshin/skills",
+  "license": "MIT"
+}

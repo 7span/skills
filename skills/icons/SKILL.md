@@ -1,3 +1,8 @@
+---
+name: icons
+description: Use Iconify with the mdi outline icon set while building the frontend. Use whenever adding icons to a UI.
+---
+
 # Icons
 
 ## Purpose
