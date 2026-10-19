@@ -1,41 +1,55 @@
 # Skills
 
-`skills` is a Claude Code plugin with opinionated coding patterns, code snippets and NPM packages for developing web applications. It lets Claude follow the same conventions across projects. This repository is both the plugin and its marketplace (`harsh`).
+A Claude Code marketplace (`7span`) where each person publishes their skills as their own plugin, named after their username. Pick the plugin you want and install only that.
 
 ## Install
 
 ```
-/plugin marketplace add theharshin/skills
-/plugin install skills@harsh
+/plugin marketplace add 7span/claude-marketplace
+/plugin install harsh@7span
+/plugin install kashyap@7span
 ```
 
-## Skills
+## Plugins
+
+| Plugin | Author | Skills |
+| --- | --- | --- |
+| [harsh](plugins/harsh) | Harsh Kansagara | Opinionated coding patterns, code snippets and NPM packages for web development |
+| [kashyap](plugins/kashyap) | Kashyap | None yet |
+
+### harsh
 
 | Skill | Use when | NPM packages |
 | --- | --- | --- |
-| [directus-generate-types](skills/directus-generate-types/SKILL.md) | Generating strict TypeScript types from the Directus API | `directus-sdk-typegen` |
-| [list-pages-development](skills/list-pages-development/SKILL.md) | Building list pages in Nuxt, Vue, Next or React | `@7span/vue-list`, `@7span/react-list` |
-| [file-naming](skills/file-naming/SKILL.md) | Creating any new file | |
-| [icons](skills/icons/SKILL.md) | Using icons while building the frontend | `@iconify/vue`, `@iconify/react` |
-| [css](skills/css/SKILL.md) | Styling the frontend with Tailwind CSS | `tailwindcss` (v4 or above) |
-| [javascript](skills/javascript/SKILL.md) | Writing JavaScript or TypeScript logic | |
-| [html](skills/html/SKILL.md) | Writing markup while building UIs | |
+| [directus-generate-types](plugins/harsh/skills/directus-generate-types/SKILL.md) | Generating strict TypeScript types from the Directus API | `directus-sdk-typegen` |
+| [list-pages-development](plugins/harsh/skills/list-pages-development/SKILL.md) | Building list pages in Nuxt, Vue, Next or React | `@7span/vue-list`, `@7span/react-list` |
+| [file-naming](plugins/harsh/skills/file-naming/SKILL.md) | Creating any new file | |
+| [icons](plugins/harsh/skills/icons/SKILL.md) | Using icons while building the frontend | `@iconify/vue`, `@iconify/react` |
+| [css](plugins/harsh/skills/css/SKILL.md) | Styling the frontend with Tailwind CSS | `tailwindcss` (v4 or above) |
+| [javascript](plugins/harsh/skills/javascript/SKILL.md) | Writing JavaScript or TypeScript logic | |
+| [html](plugins/harsh/skills/html/SKILL.md) | Writing markup while building UIs | |
 
 ## Structure
 
-| Path | Purpose |
-| --- | --- |
-| [.claude-plugin/plugin.json](.claude-plugin/plugin.json) | Plugin manifest |
-| [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json) | Marketplace listing for this plugin |
-| [skills/](skills) | One folder per skill, each with a `SKILL.md` and optional `snippets/` |
-| [CLAUDE.md](CLAUDE.md) | Guidance for Claude Code when editing this repository |
+```
+.claude-plugin/marketplace.json     Marketplace listing of all plugins
+plugins/<username>/
+  .claude-plugin/plugin.json        Plugin manifest
+  skills/<skill-name>/SKILL.md      One skill per file, with optional snippets/
+```
 
-## Adding a skill
+## Adding your plugin
 
-1. Create `skills/<name>/SKILL.md` with `name` and `description` front-matter, then the purpose and rules.
-2. Add code snippets as separate files in `skills/<name>/snippets/` and link them from the `SKILL.md`.
-3. Add the skill to the table above.
-4. Bump `version` in `plugin.json` and `marketplace.json`.
+1. Create `plugins/<username>/` with `.claude-plugin/plugin.json` (`name` is your username) and a `skills/` folder.
+2. List the plugin in [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json) with `"source": "./plugins/<username>"`.
+3. Add the plugin to the table above.
+
+## Adding a skill to a plugin
+
+1. Create `plugins/<username>/skills/<name>/SKILL.md` with `name` and `description` front-matter, then the purpose and rules.
+2. Add code snippets as separate files in `plugins/<username>/skills/<name>/snippets/` and link them from the `SKILL.md`.
+3. Add the skill to the plugin's table above.
+4. Bump `version` in the plugin's `plugin.json` and its entry in `marketplace.json`.
 
 Naming rules:
 

@@ -1,0 +1,11 @@
+{
+  "name": "kashyap",
+  "version": "0.1.0",
+  "description": "Skills by Kashyap.",
+  "author": {
+    "name": "Kashyap"
+  },
+  "homepage": "https://github.com/7span/claude-marketplace",
+  "repository": "https://github.com/7span/claude-marketplace",
+  "license": "MIT"
+}

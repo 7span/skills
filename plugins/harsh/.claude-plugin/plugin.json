@@ -1,12 +1,12 @@
 {
-  "name": "theharsh-skills",
+  "name": "harsh",
   "version": "0.1.0",
   "description": "Opinionated coding patterns, code snippets and NPM packages for developing web applications.",
   "author": {
     "name": "Harsh Kansagara",
     "email": "harsh@7span.com"
   },
-  "homepage": "https://github.com/theharshin/skills",
-  "repository": "https://github.com/theharshin/skills",
+  "homepage": "https://github.com/7span/claude-marketplace",
+  "repository": "https://github.com/7span/claude-marketplace",
   "license": "MIT"
 }

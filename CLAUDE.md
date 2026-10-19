@@ -4,20 +4,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-A Claude Code plugin (`skills`) and its own marketplace (`harsh`), holding opinionated coding patterns, code snippets and NPM packages for web development. It is documentation only: there is no build, lint or test tooling, and the snippets are reference files, not a runnable project.
+A Claude Code marketplace (`7span`) where each person publishes their skills as their own plugin, named after their username. The `harsh` plugin holds opinionated coding patterns, code snippets and NPM packages for web development. It is documentation only: there is no build, lint or test tooling, and the snippets are reference files, not a runnable project.
 
-Author: Harsh Kansagara (harsh@7span.com). Copyright: 7Span Internet Private Limited. License: MIT. Published from GitHub `theharshin/skills`.
+Marketplace owner: Harsh Kansagara (harsh@7span.com). Copyright: 7Span Internet Private Limited. License: MIT. Published from GitHub `7span/claude-marketplace`.
 
 ## Structure
 
-- `.claude-plugin/plugin.json` is the plugin manifest (name, version, author, license).
-- `.claude-plugin/marketplace.json` makes this repo a marketplace that lists the plugin with `"source": "./"`.
-- `skills/<skill-name>/SKILL.md` is one skill per coding pattern: front-matter (`name`, `description`), purpose, rules, and links to its snippets. The `name` must match the folder name.
-- `skills/<skill-name>/snippets/` holds that skill's code snippets, one file each, as real files (`.ts`, `.json`, ...), not code pasted into markdown. Link them with paths relative to the skill's `SKILL.md`.
+- `.claude-plugin/marketplace.json` lists every plugin, each with `"source": "./plugins/<username>"`. There is no plugin at the repo root.
+- `plugins/<username>/.claude-plugin/plugin.json` is that user's plugin manifest. Its `name` is the username.
+- `plugins/<username>/skills/<skill-name>/SKILL.md` is one skill per coding pattern: front-matter (`name`, `description`), purpose, rules, and links to its snippets. The `name` must match the folder name.
+- `plugins/<username>/skills/<skill-name>/snippets/` holds that skill's code snippets, one file each, as real files (`.ts`, `.json`, ...), not code pasted into markdown. Link them with paths relative to the skill's `SKILL.md`.
 
-Install: `/plugin marketplace add theharshin/skills`, then `/plugin install skills@harsh`.
+Install: `/plugin marketplace add 7span/claude-marketplace`, then `/plugin install <username>@7span`.
 
-When adding a skill, also list it in the README skills table. When changing the plugin's contents, bump `version` in both `plugin.json` and `marketplace.json`.
+When adding a plugin, list it in `marketplace.json` and in the README plugins table. When adding a skill, also list it under its plugin in the README. When changing a plugin's contents, bump `version` in that plugin's `plugin.json` and its `marketplace.json` entry. Only touch the plugin you were asked to change; each plugin belongs to its user.
 
 ## Conventions
 
