@@ -17,7 +17,7 @@ Read the index for the area that matches the task, then the linked file.
 | --- | --- | --- |
 | CSS | [css.md](technologies/css.md) | Plain CSS (stub) |
 | Tailwind CSS | [tailwind.md](technologies/tailwind.md) | Setup, classes and spacing, colors |
-| Directus | [directus.md](technologies/directus.md) | Generate types, table creation, table naming, field naming |
+| Directus | [directus.md](technologies/directus.md) | Generate types, table creation, table naming, junction table naming, field naming |
 | HTML | [html.md](technologies/html.md) | Wrapper divs |
 | JavaScript | [javascript.md](technologies/javascript.md) | Null checks, reusable functions, NPM packages, readable code |
 

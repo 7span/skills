@@ -34,7 +34,7 @@ Claude loads `SKILL.md`, then reads the index and linked file that match the tas
 
 | Area | Files |
 | --- | --- |
-| [Technologies](skills/technologies/index.md) | CSS, Tailwind CSS (setup, classes, colors), Directus (generate types, table creation, table naming, field naming), HTML (wrapper divs), JavaScript (null checks, reusable functions, NPM packages, readable code) |
+| [Technologies](skills/technologies/index.md) | CSS, Tailwind CSS (setup, classes, colors), Directus (generate types, table creation, table naming, junction table naming, field naming), HTML (wrapper divs), JavaScript (null checks, reusable functions, NPM packages, readable code) |
 | [Patterns](skills/patterns/index.md) | List pages development, icons, file naming |
 | [Snippets](skills/snippets/index.md) | Directus types generation script and npm script |
 

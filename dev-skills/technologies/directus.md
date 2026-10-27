@@ -55,7 +55,28 @@ The snippet is written for Directus + Nuxt. Use the same pattern for other frame
 | Use `snake_case` names                              | `Project_Coord`    | `project_coordinator`           |
 | Use plural names                                    | `user`             | `users`                         |
 | Do not prefix `master_` for master data             | `master_countries` | `countries`                     |
-| Junction tables use `<table_1>__<table_2>__<field>` |                    | `<table_1>__<table_2>__<field>` |
+
+## Junction Table Naming
+
+For junction table names, use the following pattern:
+
+`<table_1>__<table_2>__<field>`
+
+For example, there are 2 tables `companies` and `contacts`. If you want to add a `contacts` field to `companies`, you'll create an M2M, which needs a junction table. In this case:
+
+- `table_1` = `companies`
+- `table_2` = `contacts`
+- `field` = `contacts`
+
+Junction table: `companies__contacts__contacts`
+
+In some cases, the same `companies` table might need a new field `owners` which again maps to the same `contacts` table. In that case:
+
+- `table_1` = `companies`
+- `table_2` = `contacts`
+- `field` = `owners`
+
+Junction table: `companies__contacts__owners`
 
 ## Field Naming
 
