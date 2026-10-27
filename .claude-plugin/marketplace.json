@@ -6,16 +6,10 @@
   },
   "plugins": [
     {
-      "name": "harsh",
-      "source": "./plugins/harsh",
-      "description": "Opinionated coding patterns, code snippets and NPM packages for developing web applications.",
-      "version": "0.1.0"
-    },
-    {
-      "name": "kashyap",
-      "source": "./plugins/kashyap",
-      "description": "Skills by Kashyap.",
-      "version": "0.1.0"
+      "name": "dev-skills",
+      "source": "./",
+      "description": "Opinionated coding patterns, technology rules, code snippets and NPM packages for developing web applications.",
+      "version": "0.2.0"
     }
   ]
 }

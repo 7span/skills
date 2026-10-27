@@ -1,19 +1,16 @@
----
-name: directus-generate-types
-description: Generate strict TypeScript types from the Directus API for frontend and backend development using directus-sdk-typegen. Use when setting up or regenerating Directus types.
----
+# Directus
 
-# Directus Generate Types
+## Generate Types
 
-## Purpose
+### Purpose
 
 Generate TypeScript types from the Directus API for frontend and backend development. This enforces strict type validation with TypeScript across the app.
 
-## Package
+### Package
 
 Uses the [`directus-sdk-typegen`](https://www.npmjs.com/package/directus-sdk-typegen) npm package.
 
-## Fixed locations (never change)
+### Fixed locations (never change)
 
 | What                 | Path                                 |
 | -------------------- | ------------------------------------ |
@@ -23,7 +20,7 @@ Uses the [`directus-sdk-typegen`](https://www.npmjs.com/package/directus-sdk-typ
 
 The generated file is always written to the same path, regardless of framework.
 
-## Rules
+### Rules
 
 1. Always use `generateDirectusTypes` from `directus-sdk-typegen` in the script at `scripts/generate-directus-types.ts`.
 2. Always set `outputPath` to `app/types/directus-schema.ts`.
@@ -31,7 +28,7 @@ The generated file is always written to the same path, regardless of framework.
 4. Read the Directus URL and token from env. Put the token in `.env.local`, never commit it.
 5. Exit with an error if either env var is missing.
 
-## Framework adaptation
+### Framework adaptation
 
 The snippet is written for Directus + Nuxt. Use the same pattern for other frameworks: keep the script path, output path and npm script identical, and only change the env var name that holds the Directus URL to match the framework's convention.
 
@@ -42,7 +39,27 @@ The snippet is written for Directus + Nuxt. Use the same pattern for other frame
 
 `DIRECTUS_TOKEN` stays the same everywhere.
 
-## Snippets
+### Snippets
 
-- Script: [snippets/script.ts](snippets/script.ts)
-- npm script: [snippets/package.json](snippets/package.json)
+- Script: [snippets/directus/generate-types/script.ts](../snippets/directus/generate-types/script.ts)
+- npm script: [snippets/directus/generate-types/package.json](../snippets/directus/generate-types/package.json)
+
+## Table Creation
+
+1. Always enable `date_created`, `date_updated`, `user_created` and `user_updated`.
+
+## Table Naming
+
+| Rule                                                | ❌ Wrong           | ✅ Correct                      |
+| --------------------------------------------------- | ------------------ | ------------------------------- |
+| Use `snake_case` names                              | `Project_Coord`    | `project_coordinator`           |
+| Use plural names                                    | `user`             | `users`                         |
+| Do not prefix `master_` for master data             | `master_countries` | `countries`                     |
+| Junction tables use `<table_1>__<table_2>__<field>` |                    | `<table_1>__<table_2>__<field>` |
+
+## Field Naming
+
+| Rule                                                  | ❌ Wrong       | ✅ Correct     |
+| ----------------------------------------------------- | -------------- | -------------- |
+| Use `snake_case` names                                | `User-Created` | `user_created` |
+| Relational field names should be a human-friendly key | `user_id`      | `user`         |
