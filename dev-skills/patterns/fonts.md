@@ -21,7 +21,7 @@ Add the Google Fonts CDN to the document `<head>` (in the root layout, e.g. `app
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
-  href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex&family=Google+Mono&display=swap"
+  href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex&family=Google+Sans+Code&display=swap"
   rel="stylesheet"
 />
 ```
