@@ -9,11 +9,9 @@
       "name": "dev-skills",
       "source": "./",
       "description": "Opinionated coding patterns, technology rules, code snippets and NPM packages for developing web applications.",
-      "version": "0.3.0",
+      "version": "0.5.0",
       "strict": false,
-      "skills": [
-        "./dev-skills"
-      ],
+      "skills": ["./dev-skills"],
       "author": {
         "name": "Harsh Kansagara",
         "email": "harsh@7span.com"
