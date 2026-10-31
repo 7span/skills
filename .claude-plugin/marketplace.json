@@ -9,7 +9,42 @@
       "name": "dev-skills",
       "source": "./",
       "description": "Opinionated coding patterns, technology rules, code snippets and NPM packages for developing web applications.",
-      "version": "0.2.0"
+      "version": "0.3.0",
+      "strict": false,
+      "skills": [
+        "./dev-skills"
+      ],
+      "author": {
+        "name": "Harsh Kansagara",
+        "email": "harsh@7span.com"
+      },
+      "homepage": "https://github.com/7span/skills",
+      "license": "MIT"
+    },
+    {
+      "name": "shadcn-design",
+      "source": "./shadcn-design",
+      "description": "Skills for shadcndesign.com: Pro Blocks for Next.js and the shadcn/ui kit for Figma.",
+      "version": "0.1.0",
+      "skills": [
+        "./pro-blocks-brand",
+        "./pro-blocks-create",
+        "./pro-blocks-page",
+        "./pro-blocks-select",
+        "./pro-blocks-setup",
+        "./shadcn-design-apply-brand",
+        "./shadcn-design-figma",
+        "./shadcn-design-figma-to-code",
+        "./shadcn-design-import-style",
+        "./shadcn-design-update"
+      ],
+      "strict": false,
+      "author": {
+        "name": "Harsh Kansagara",
+        "email": "harsh@7span.com"
+      },
+      "homepage": "https://github.com/7span/skills",
+      "license": "MIT"
     }
   ]
 }
