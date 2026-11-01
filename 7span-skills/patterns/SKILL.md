@@ -1,6 +1,11 @@
-# Patterns Index
+---
+name: patterns
+description: "Cross-cutting 7Span web development patterns: list pages (@7span/vue-list, @7span/react-list), icons (Iconify), fonts, file naming, comments. Use when building list pages, adding icons or fonts, creating files or writing comments."
+---
 
-Cross-cutting patterns that span multiple technologies or frameworks.
+# Patterns
+
+Cross-cutting patterns that span multiple technologies or frameworks. Read the file that matches the task.
 
 | Pattern                | File                                                   | Use when                                            | NPM packages                           |
 | ---------------------- | ------------------------------------------------------ | --------------------------------------------------- | -------------------------------------- |

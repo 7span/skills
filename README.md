@@ -2,14 +2,14 @@
 
 A Claude Code marketplace (`7span`) with two plugins:
 
-- `dev-skills`: opinionated coding patterns, technology rules, code snippets and NPM packages for developing web applications.
+- `7span-skills`: opinionated coding patterns, technology rules, code snippets and NPM packages for developing web applications.
 - `shadcn-design`: skills for shadcndesign.com Pro Blocks (Next.js) and the shadcn/ui kit for Figma.
 
 ## Install
 
 ```
 /plugin marketplace add 7span/skills
-/plugin install dev-skills@7span
+/plugin install 7span-skills@7span
 /plugin install shadcn-design@7span
 ```
 
@@ -24,36 +24,34 @@ npx skills add 7span/skills
 ```
 .claude-plugin/
   marketplace.json                   Marketplace listing and plugin definitions
-dev-skills/
-  SKILL.md                           Entry point: maps every file below
-  technologies/
-    index.md                         Maps all technology files
-    <technology>.md                  One file per technology, a section per use case
+7span-skills/
+  <technology>/                      One skill per technology (css, directus, html, javascript, tailwind)
+    SKILL.md                         Rules, a section per use case
+    snippets/<use-case>/             Snippets as real files, next to the skill that uses them
   patterns/
-    index.md                         Maps all pattern files
+    SKILL.md                         Maps all pattern files
     <pattern>.md                     Cross-cutting patterns
-  snippets/
-    index.md                         Maps all snippets
-    <technology>/<use-case>/         Snippets as real files
 ```
 
-Claude loads `SKILL.md`, then reads the index and linked file that match the task.
+Each skill is invoked as `/7span-skills:<skill>` (for example `/7span-skills:tailwind`).
 
 ## Contents
 
-| Area | Files |
+| Skill | Covers |
 | --- | --- |
-| [Technologies](dev-skills/technologies/index.md) | CSS, Tailwind CSS (setup, classes, colors), Directus (generate types, table creation, table naming, junction table naming, field naming), HTML (wrapper divs), JavaScript (null checks, reusable functions, NPM packages, readable code) |
-| [Patterns](dev-skills/patterns/index.md) | List pages development, icons, file naming |
-| [Snippets](dev-skills/snippets/index.md) | Directus types generation script and npm script |
+| [css](7span-skills/css/SKILL.md) | Plain CSS (stub) |
+| [tailwind](7span-skills/tailwind/SKILL.md) | Setup, classes and spacing, colors |
+| [directus](7span-skills/directus/SKILL.md) | Generate types (with script and npm script snippets), table creation, table naming, junction table naming, field naming |
+| [html](7span-skills/html/SKILL.md) | Wrapper divs |
+| [javascript](7span-skills/javascript/SKILL.md) | Null checks, reusable functions, NPM packages, readable code |
+| [patterns](7span-skills/patterns/SKILL.md) | List pages development, icons, fonts, file naming, comments |
 
 ## Adding to this repository
 
-1. Technology rule: add a section to `technologies/<technology>.md` (create the file if the technology is new). One file per technology, one section per use case.
-2. Cross-cutting pattern: add `patterns/<name>.md`.
-3. Code snippet: add it as a real file under `snippets/<technology>/<use-case>/` and link it from the file that uses it.
-4. Map the new file in its folder's `index.md` and in `dev-skills/SKILL.md`.
-5. Bump the plugin's `version` in `.claude-plugin/marketplace.json`.
+1. Technology rule: add a section to `7span-skills/<technology>/SKILL.md`. For a new technology, create the folder with a `SKILL.md` and add it to the `skills` list of `7span-skills` in `.claude-plugin/marketplace.json`.
+2. Cross-cutting pattern: add `7span-skills/patterns/<name>.md` and map it in `7span-skills/patterns/SKILL.md`.
+3. Code snippet: add it as a real file under `7span-skills/<technology>/snippets/<use-case>/` and link it from the `SKILL.md` that uses it.
+4. Bump the plugin's `version` in `.claude-plugin/marketplace.json`.
 
 Naming rules:
 

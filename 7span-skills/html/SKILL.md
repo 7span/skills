@@ -1,3 +1,8 @@
+---
+name: html
+description: "HTML rules for 7Span web projects: keep markup lean with fewer wrapper divs. Use when writing or reviewing HTML or component templates."
+---
+
 # HTML
 
 ## Wrapper Divs

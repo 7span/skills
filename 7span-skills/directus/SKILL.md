@@ -1,3 +1,8 @@
+---
+name: directus
+description: "Directus rules for 7Span projects: type generation with directus-sdk-typegen, table creation, table, junction table and field naming. Use when setting up or modelling a Directus backend."
+---
+
 # Directus
 
 ## Generate Types
@@ -41,8 +46,8 @@ The snippet is written for Directus + Nuxt. Use the same pattern for other frame
 
 ### Snippets
 
-- Script: [snippets/directus/generate-types/script.ts](../snippets/directus/generate-types/script.ts)
-- npm script: [snippets/directus/generate-types/package.json](../snippets/directus/generate-types/package.json)
+- Script: [snippets/generate-types/script.ts](snippets/generate-types/script.ts)
+- npm script: [snippets/generate-types/package.json](snippets/generate-types/package.json)
 
 ## Table Creation
 

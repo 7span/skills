@@ -6,12 +6,19 @@
   },
   "plugins": [
     {
-      "name": "dev-skills",
-      "source": "./",
+      "name": "7span-skills",
+      "source": "./7span-skills",
       "description": "Opinionated coding patterns, technology rules, code snippets and NPM packages for developing web applications.",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "strict": false,
-      "skills": ["./dev-skills"],
+      "skills": [
+        "./css",
+        "./directus",
+        "./html",
+        "./javascript",
+        "./patterns",
+        "./tailwind"
+      ],
       "author": {
         "name": "Harsh Kansagara",
         "email": "harsh@7span.com"

@@ -1,3 +1,8 @@
+---
+name: javascript
+description: "JavaScript rules for 7Span web projects: null checks, reusable functions, NPM package choice, readable code. Use when writing or reviewing JavaScript or TypeScript."
+---
+
 # JavaScript
 
 ## Null and Undefined Checks

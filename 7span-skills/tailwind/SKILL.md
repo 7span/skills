@@ -1,3 +1,8 @@
+---
+name: tailwind
+description: "Tailwind CSS rules for 7Span web projects: setup (v4+), native classes and spacing, primary/secondary color variants. Use when styling a frontend with Tailwind CSS."
+---
+
 # Tailwind CSS
 
 Style the frontend with Tailwind CSS.
