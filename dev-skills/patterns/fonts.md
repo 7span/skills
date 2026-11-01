@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Use fonts consistently while building the frontend and keep font traffic off our own hosting. This skill spans multiple frameworks, so it is named by purpose.
+Use fonts consistently while building the frontend and keep font traffic off our own hosting.
 
 ## Rules
 

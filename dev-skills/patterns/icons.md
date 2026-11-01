@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Use icons consistently while building the frontend. This skill spans multiple frameworks, so it is named by purpose.
+Use icons consistently while building the frontend.
 
 ## Library
 

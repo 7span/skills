@@ -8,7 +8,7 @@ description: Opinionated coding patterns, technology rules, code snippets and NP
 Read the index for the area that matches the task, then the linked file.
 
 - [Technologies index](technologies/index.md): one file per technology (CSS, Tailwind CSS, Directus, HTML, JavaScript)
-- [Patterns index](patterns/index.md): cross-cutting patterns (list pages, icons, fonts, file naming)
+- [Patterns index](patterns/index.md): cross-cutting patterns (list pages, icons, fonts, file naming, comments)
 - [Snippets index](snippets/index.md): code snippets used by the files above
 
 ## Technologies
@@ -29,6 +29,7 @@ Read the index for the area that matches the task, then the linked file.
 | Icons | [patterns/icons.md](patterns/icons.md) |
 | Fonts | [patterns/fonts.md](patterns/fonts.md) |
 | File naming | [patterns/file-naming.md](patterns/file-naming.md) |
+| Comments | [patterns/comments.md](patterns/comments.md) |
 
 ## Snippets
 

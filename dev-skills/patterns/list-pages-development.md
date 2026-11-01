@@ -4,13 +4,13 @@
 
 ## Purpose
 
-Build list pages (data listing with pagination, search, filters, sorting) using 7Span's list packages. This skill spans multiple frameworks, so it is named by purpose instead of a framework prefix.
+Build list pages (data listing with pagination, search, filters, sorting) using 7Span's list packages.
 
 ## Packages by framework
 
-| Framework | Package | Documentation |
-| --- | --- | --- |
-| Nuxt, Vue | `@7span/vue-list` | https://7span.com/open-source/vue-list/ |
+| Framework   | Package             | Documentation                             |
+| ----------- | ------------------- | ----------------------------------------- |
+| Nuxt, Vue   | `@7span/vue-list`   | https://7span.com/open-source/vue-list/   |
 | Next, React | `@7span/react-list` | https://7span.com/open-source/react-list/ |
 
 Pick the package from the project's framework. Never mix them.
