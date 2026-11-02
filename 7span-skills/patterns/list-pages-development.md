@@ -8,10 +8,10 @@ Build list pages (data listing with pagination, search, filters, sorting) using 
 
 ## Packages by framework
 
-| Framework   | Package                 | Source Code                                     |
-| ----------- | ----------------------- | ----------------------------------------------- |
-| Nuxt, Vue   | `@shilp.dev/vue-list`   | https://github.com/shilpdev/list/packages/vue   |
-| Next, React | `@shilp.dev/react-list` | https://github.com/shilpdev/list/pacakges/react |
+| Framework   | Package                 | Source Code                                             |
+| ----------- | ----------------------- | ------------------------------------------------------- |
+| Nuxt, Vue   | `@shilp.dev/vue-list`   | https://github.com/shilpdev/list/tree/main/packages/vue |
+| Next, React | `@shilp.dev/react-list` | https://github.com/shilpdev/list/tree/main/packages/vue |
 
 Pick the package from the project's framework. Never mix them.
 
