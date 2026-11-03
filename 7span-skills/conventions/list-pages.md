@@ -6,7 +6,7 @@ For how list pages should look and behave, see the [list pages pattern](../patte
 
 ## Purpose
 
-Build list pages (data listing with pagination, search, filters, sorting) using 7Span's list packages.
+Build list & table pages (data listing with pagination, search, filters, sorting) using 7Span's list packages.
 
 ## Packages by framework
 

@@ -9,7 +9,7 @@ How the application should work: structure, behavior and UX decisions that stay 
 
 | Pattern    | File                         | Use when                                                         |
 | ---------- | ---------------------------- | ---------------------------------------------------------------- |
-| App        | [app.md](app.md)             | Understanding the overall app: layout, sidebar, modal/drawer use |
+| App        | [app.md](app.md)             | Building admin panels, dashboards or CRUD systems (the list and item model) |
 | Routes     | [routes.md](routes.md)       | Defining pages and URLs                                          |
 | List pages | [list-pages.md](list-pages.md) | Designing a page that lists records                            |
 | Item pages | [item-pages.md](item-pages.md) | Designing a page to create, edit or view a single record       |
