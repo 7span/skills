@@ -1,5 +1,7 @@
 # List Pages Development
 
+For how list pages should look and behave, see the [list pages pattern](../patterns/list-pages.md).
+
 > Status: stub. Patterns and snippets to be added.
 
 ## Purpose

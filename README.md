@@ -28,9 +28,12 @@ npx skills add 7span/skills
   <technology>/                      One skill per technology (css, directus, html, javascript, tailwind)
     SKILL.md                         Rules, a section per use case
     snippets/<use-case>/             Snippets as real files, next to the skill that uses them
+  conventions/
+    SKILL.md                         Maps all convention files
+    <convention>.md                  How code is written: naming, defaults, icons, fonts
   patterns/
     SKILL.md                         Maps all pattern files
-    <pattern>.md                     Cross-cutting patterns
+    <pattern>.md                     How the app works: routes, list and item pages
 ```
 
 Each skill is invoked as `/7span-skills:<skill>` (for example `/7span-skills:tailwind`).
@@ -44,12 +47,13 @@ Each skill is invoked as `/7span-skills:<skill>` (for example `/7span-skills:tai
 | [directus](7span-skills/directus/SKILL.md) | Generate types (with script and npm script snippets), table creation, table naming, junction table naming, field naming |
 | [html](7span-skills/html/SKILL.md) | Wrapper divs |
 | [javascript](7span-skills/javascript/SKILL.md) | Null checks, reusable functions, NPM packages, readable code |
-| [patterns](7span-skills/patterns/SKILL.md) | List pages development, icons, fonts, file naming, comments |
+| [conventions](7span-skills/conventions/SKILL.md) | List pages development, icons, fonts, file naming, comments |
+| [patterns](7span-skills/patterns/SKILL.md) | App overview, routes, list pages, item pages |
 
 ## Adding to this repository
 
 1. Technology rule: add a section to `7span-skills/<technology>/SKILL.md`. For a new technology, create the folder with a `SKILL.md` and add it to the `skills` list of `7span-skills` in `.claude-plugin/marketplace.json`.
-2. Cross-cutting pattern: add `7span-skills/patterns/<name>.md` and map it in `7span-skills/patterns/SKILL.md`.
+2. Code convention: add `7span-skills/conventions/<name>.md` and map it in `7span-skills/conventions/SKILL.md`. Application pattern (how the app works): add `7span-skills/patterns/<name>.md` and map it in `7span-skills/patterns/SKILL.md`.
 3. Code snippet: add it as a real file under `7span-skills/<technology>/snippets/<use-case>/` and link it from the `SKILL.md` that uses it.
 4. Bump the plugin's `version` in `.claude-plugin/marketplace.json`.
 

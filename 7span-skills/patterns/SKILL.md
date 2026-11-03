@@ -1,16 +1,15 @@
 ---
 name: patterns
-description: "Cross-cutting 7Span web development patterns: list pages (@7span/vue-list, @7span/react-list), icons (Iconify), fonts, file naming, comments. Use when building list pages, adding icons or fonts, creating files or writing comments."
+description: "7Span application patterns: how an app should work and look: overall app structure, routes, list pages, and item (create, edit, view) pages. Use when planning or building screens, pages, navigation or URLs. For how code is written, use the conventions skill."
 ---
 
 # Patterns
 
-Cross-cutting patterns that span multiple technologies or frameworks. Read the file that matches the task.
+How the application should work: structure, behavior and UX decisions that stay the same across projects. Read the file that matches the task. For how code is written (naming, icons, fonts, packages), see the [conventions](../conventions/SKILL.md) skill.
 
-| Pattern                | File                                                   | Use when                                            | NPM packages                           |
-| ---------------------- | ------------------------------------------------------ | --------------------------------------------------- | -------------------------------------- |
-| List pages development | [list-pages-development.md](list-pages-development.md) | Building list pages in Nuxt, Vue, Next or React     | `@7span/vue-list`, `@7span/react-list` |
-| Icons                  | [icons.md](icons.md)                                   | Using icons while building the frontend             | `@iconify/vue`, `@iconify/react`       |
-| Fonts                  | [fonts.md](fonts.md)                                   | Choosing or setting up fonts (Google Fonts via CDN) |                                        |
-| File naming            | [file-naming.md](file-naming.md)                       | Creating any new file                               |                                        |
-| Comments               | [comments.md](comments.md)                             | Writing or reviewing code comments                  |                                        |
+| Pattern    | File                         | Use when                                                         |
+| ---------- | ---------------------------- | ---------------------------------------------------------------- |
+| App        | [app.md](app.md)             | Understanding the overall app: layout, sidebar, modal/drawer use |
+| Routes     | [routes.md](routes.md)       | Defining pages and URLs                                          |
+| List pages | [list-pages.md](list-pages.md) | Designing a page that lists records                            |
+| Item pages | [item-pages.md](item-pages.md) | Designing a page to create, edit or view a single record       |
