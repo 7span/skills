@@ -30,10 +30,10 @@ npx skills add 7span/skills
     snippets/<use-case>/             Snippets as real files, next to the skill that uses them
   conventions/
     SKILL.md                         Maps all convention files
-    <convention>.md                  How code is written: naming, defaults, icons, fonts
+    <convention>.md                  How code is written: directory structure, naming, defaults, icons, fonts, comments
   patterns/
     SKILL.md                         Maps all pattern files
-    <pattern>.md                     How the app works: routes, list and item pages
+    <pattern>.md                     How the app works: app overview (list and item), routes, list pages, item pages
 ```
 
 Each skill is invoked as `/7span-skills:<skill>` (for example `/7span-skills:tailwind`).
@@ -47,8 +47,8 @@ Each skill is invoked as `/7span-skills:<skill>` (for example `/7span-skills:tai
 | [directus](7span-skills/directus/SKILL.md) | Generate types (with script and npm script snippets), table creation, table naming, junction table naming, field naming |
 | [html](7span-skills/html/SKILL.md) | Wrapper divs |
 | [javascript](7span-skills/javascript/SKILL.md) | Null checks, reusable functions, NPM packages, readable code |
-| [conventions](7span-skills/conventions/SKILL.md) | List pages development, icons, fonts, file naming, comments |
-| [patterns](7span-skills/patterns/SKILL.md) | App overview, routes, list pages, item pages |
+| [conventions](7span-skills/conventions/SKILL.md) | How code is written: directory structure, list pages development, icons, fonts, file naming, comments |
+| [patterns](7span-skills/patterns/SKILL.md) | How the app works (admin panels, dashboards, CRUD): the list and item model, routes, list pages, item pages |
 
 ## Adding to this repository
 
@@ -59,7 +59,7 @@ Each skill is invoked as `/7span-skills:<skill>` (for example `/7span-skills:tai
 
 Naming rules:
 
-- Each coding pattern and code snippet is its own file.
+- Each technology, coding convention, application pattern and code snippet is its own file.
 - Use `kebab-case` for all file names.
 
 ## Author
