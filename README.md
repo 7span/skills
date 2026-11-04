@@ -25,7 +25,7 @@ npx skills add 7span/skills
 .claude-plugin/
   marketplace.json                   Marketplace listing and plugin definitions
 7span-skills/
-  <technology>/                      One skill per technology (css, directus, html, javascript, tailwind)
+  <technology>/                      One skill per technology (css, directus, html, javascript, reactjs, tailwind)
     SKILL.md                         Rules, a section per use case
     snippets/<use-case>/             Snippets as real files, next to the skill that uses them
   patterns/
@@ -44,6 +44,7 @@ Each skill is invoked as `/7span-skills:<skill>` (for example `/7span-skills:tai
 | [directus](7span-skills/directus/SKILL.md) | Generate types (with script and npm script snippets), table creation, table naming, junction table naming, field naming |
 | [html](7span-skills/html/SKILL.md) | Wrapper divs |
 | [javascript](7span-skills/javascript/SKILL.md) | Null checks, reusable functions, NPM packages, readable code |
+| [reactjs](7span-skills/reactjs/SKILL.md) | React.js and Next.js: project understanding, approval before changes, hooks, packages, reusability, TypeScript, App Router |
 | [patterns](7span-skills/patterns/SKILL.md) | List pages development, icons, fonts, file naming, comments |
 
 ## Adding to this repository
