@@ -12,6 +12,7 @@
       "version": "0.12.1",
       "strict": false,
       "skills": [
+        "./code-gate",
         "./conventions",
         "./css",
         "./directus",
