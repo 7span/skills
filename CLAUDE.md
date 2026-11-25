@@ -14,7 +14,7 @@ Marketplace owner: Harsh Kansagara (harsh@7span.com). Copyright: 7Span Internet 
 ## Structure
 
 - `.claude-plugin/marketplace.json` lists both plugins; it is the only manifest: both plugins are defined there with `"strict": false` and no `plugin.json` (each plugin sets `"source"` to its folder and lists its skill folders in `"skills"` relative to that source, e.g. `"./7span-skills"` with `"./tailwind"`).
-- `7span-skills/<technology>/SKILL.md`: one skill per technology (`css`, `directus`, `html`, `javascript`, `tailwind`), invoked as `/7span-skills:<technology>`. Technology-specific rules, with a section per use case.
+- `7span-skills/<technology>/SKILL.md`: one skill per technology (`css`, `directus`, `html`, `javascript`, `reactjs`, `tailwind`), invoked as `/7span-skills:<technology>`. Technology-specific rules, with a section per use case.
 - `7span-skills/conventions/SKILL.md`: the `conventions` skill. It maps the `<name>.md` files beside it: how code is written (file and variable naming, icons, fonts, comments, list page implementation), read on demand.
 - `7span-skills/patterns/SKILL.md`: the `patterns` skill. It maps the `<name>.md` files beside it: how the application works (app overview, routes, list pages, item pages), read on demand.
 - `7span-skills/<technology>/snippets/<use-case>/`: code snippets as real files (`.ts`, `.json`, ...), not pasted into markdown. Link them with relative paths from the `SKILL.md` that uses them.
