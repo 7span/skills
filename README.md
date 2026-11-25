@@ -1,63 +1,78 @@
-# Skills
+# 7Span Skills
 
-A Claude Code marketplace (`7span`) with two plugins:
+The way we build software at 7Span, written down so your AI agent can follow it too.
 
-- `7span-skills`: opinionated coding patterns, technology rules, code snippets and NPM packages for developing web applications.
-- `shadcn-design`: skills for shadcndesign.com Pro Blocks (Next.js) and the shadcn/ui kit for Figma.
+## Introduction
 
-## Install
+Every team builds up its own way of doing things: how files are named, how list pages behave, which packages to use, how a Directus table is modelled. Most of it lives in people's heads and in code reviews.
+
+This repository collects those opinionated patterns and conventions across technologies, software development and design, and packages them as skills. Once installed, your agent (Claude, Cursor, Copilot and others) picks the relevant skill up on its own and writes code the 7Span way, without you repeating the same instructions in every prompt.
+
+For example, ask your agent to "create a users list page" and it will follow our routes, list page behaviour and file naming instead of inventing its own.
+
+## How to use
+
+### Any editor or agent
+
+Skills are distributed with [skills.sh](https://skills.sh) by Vercel, which works with a variety of code editors, models and agents. From the root of your project, run:
+
+```bash
+npx skills add 7span/skills
+```
+
+That's it. The skills are added to your project and your agent loads them when the task matches.
+
+### Claude
+
+In Claude, go to **Settings > Customize > Plugins**, search for **7Span Skills** and install it.
+
+In Claude Code, you can also install it from the terminal:
 
 ```
 /plugin marketplace add 7span/skills
 /plugin install 7span-skills@7span
-/plugin install shadcn-design@7span
 ```
 
-With [skills.sh](https://skills.sh):
+Skills load automatically, or you can call one directly, for example `/7span-skills:tailwind`.
 
-```
-npx skills add 7span/skills
-```
+## Plugins
 
-## Structure
+### 7span-skills
 
-```
-.claude-plugin/
-  marketplace.json                   Marketplace listing and plugin definitions
-7span-skills/
-  <technology>/                      One skill per technology (css, directus, html, javascript, reactjs, tailwind)
-    SKILL.md                         Rules, a section per use case
-    snippets/<use-case>/             Snippets as real files, next to the skill that uses them
-  patterns/
-    SKILL.md                         Maps all pattern files
-    <pattern>.md                     Cross-cutting patterns
-```
+The core plugin: the opinionated patterns we follow at 7Span. Each skill covers one of:
 
-Each skill is invoked as `/7span-skills:<skill>` (for example `/7span-skills:tailwind`).
+- **Technology**: rules for a specific tool, such as Tailwind CSS, Directus or JavaScript.
+- **Use case**: a specific task within a technology, such as generating Directus types.
+- **Convention**: how code is written, such as file naming, comments or icons.
+- **Pattern**: how the application works, such as routes, list pages and item pages.
+- **Code snippets**: ready-to-use files, such as scripts and config, that a skill points to.
 
-## Contents
+### shadcn-design
 
-| Skill | Covers |
+Only relevant if you use [shadcndesign.com](https://shadcndesign.com/) Pro Blocks in React (Next.js) or their shadcn/ui kit for Figma. It helps your agent set up, pick, build and brand Pro Blocks pages, and move designs between Figma and code. Skip it otherwise.
+
+## How to contribute
+
+Contributions are welcome through pull requests. A good skill captures a decision your team has already made, so the agent stops guessing.
+
+In your PR, explain:
+
+1. **The problem**: what goes wrong or stays inconsistent today.
+2. **Why it's needed**: why this approach over the alternatives.
+3. **How it helps**: what changes once the agent follows it.
+4. **A small example**: the code or behaviour before and after.
+
+### Be specific, not generic
+
+Agents already know general best practices. A skill is only useful when it states a concrete, opinionated choice.
+
+| Avoid (generic) | Prefer (specific) |
 | --- | --- |
-| [css](7span-skills/css/SKILL.md) | Plain CSS (stub) |
-| [tailwind](7span-skills/tailwind/SKILL.md) | Setup, classes and spacing, colors |
-| [directus](7span-skills/directus/SKILL.md) | Generate types (with script and npm script snippets), table creation, table naming, junction table naming, field naming |
-| [html](7span-skills/html/SKILL.md) | Wrapper divs |
-| [javascript](7span-skills/javascript/SKILL.md) | Null checks, reusable functions, NPM packages, readable code |
-| [reactjs](7span-skills/reactjs/SKILL.md) | React.js and Next.js: project understanding, approval before changes, hooks, packages, reusability, TypeScript, App Router |
-| [patterns](7span-skills/patterns/SKILL.md) | List pages development, icons, fonts, file naming, comments |
+| Use a consistent color scheme across the project. | Create `primary` and `secondary` color variants in Tailwind and use them in classes (`bg-primary-500`, not `bg-blue-500`). |
+| Avoid duplicate code. | If the same logic is used more than 2 times, move it to a function and import it everywhere it's used. |
+| Name database tables properly. | Name Directus tables in plural `snake_case` without a `master_` prefix (`countries`, not `master_countries`). |
 
-## Adding to this repository
-
-1. Technology rule: add a section to `7span-skills/<technology>/SKILL.md`. For a new technology, create the folder with a `SKILL.md` and add it to the `skills` list of `7span-skills` in `.claude-plugin/marketplace.json`.
-2. Cross-cutting pattern: add `7span-skills/patterns/<name>.md` and map it in `7span-skills/patterns/SKILL.md`.
-3. Code snippet: add it as a real file under `7span-skills/<technology>/snippets/<use-case>/` and link it from the `SKILL.md` that uses it.
-4. Bump the plugin's `version` in `.claude-plugin/marketplace.json`.
-
-Naming rules:
-
-- Each coding pattern and code snippet is its own file.
-- Use `kebab-case` for all file names.
+If a rule could apply to any team in the world, it probably doesn't belong here.
 
 ## Author
 

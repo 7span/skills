@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Keep file names consistent across projects and operating systems.
+Keep file & folder names consistent across projects and operating systems.
 
 ## Rules
 
